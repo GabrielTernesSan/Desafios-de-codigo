@@ -2,7 +2,7 @@
 
 namespace Web.Interfaces
 {
-    public interface IHeroiApi
+    public interface IVingadorApi
     {
         Task<Root> Vingadores();
     }

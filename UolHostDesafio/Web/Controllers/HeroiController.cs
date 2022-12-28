@@ -13,15 +13,17 @@ namespace Web.Controllers
     {
         private readonly IMediator _mediator;
         private readonly IVingadorService _vingadorService;
+        private readonly ILigaService _ligaService;
         private readonly IJogadorQuery _query;
         private readonly IVingadoresQuery _vingadoresQuery;
 
-        public HeroiController(IMediator mediator, IJogadorQuery query, IVingadorService vingadorService, IVingadoresQuery vingadoresQuery)
+        public HeroiController(IMediator mediator, IJogadorQuery query, IVingadorService vingadorService, IVingadoresQuery vingadoresQuery, ILigaService ligaService)
         {
             _mediator = mediator;
             _query = query;
             _vingadorService = vingadorService;
             _vingadoresQuery = vingadoresQuery;
+            _ligaService = ligaService;
         }
 
         [HttpGet]
@@ -85,6 +87,13 @@ namespace Web.Controllers
         public async Task<IActionResult> GetVingador()
         {
             var response = await _vingadoresQuery.ObterVingadores();
+            return Ok(response);
+        }
+
+        [HttpGet("/liga/externo")]
+        public async Task<IActionResult> GetLiga()
+        {
+            var response = await _ligaService.BuscarLigaDaJustica();
             return Ok(response);
         }
     }

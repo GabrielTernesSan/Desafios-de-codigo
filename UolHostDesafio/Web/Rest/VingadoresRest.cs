@@ -4,7 +4,7 @@ using static Domain.Entities.Vingadores;
 
 namespace Web.Rest
 {
-    public class VingadoresRest : IHeroiApi
+    public class VingadoresRest : IVingadorApi
     {
         public async Task<Root> Vingadores()
         {

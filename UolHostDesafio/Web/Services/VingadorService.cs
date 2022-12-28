@@ -6,9 +6,9 @@ namespace Web.Services
     public class VingadorService : IVingadorService
     {
 
-        private readonly IHeroiApi _heroiApi;
+        private readonly IVingadorApi _heroiApi;
 
-        public VingadorService(IHeroiApi heroiApi)
+        public VingadorService(IVingadorApi heroiApi)
         {
             _heroiApi = heroiApi;
         }

@@ -23,7 +23,9 @@ builder.Services.AddMediatR(typeof(ExcluirJogadorHandler).GetTypeInfo().Assembly
 builder.Services.AddMediatR(typeof(AddVingadorHandler).GetTypeInfo().Assembly);
 
 builder.Services.AddSingleton<IVingadorService, VingadorService>();
-builder.Services.AddSingleton<IHeroiApi, VingadoresRest>();
+builder.Services.AddSingleton<IVingadorApi, VingadoresRest>();
+builder.Services.AddSingleton<ILigaService, LigaService>();
+builder.Services.AddSingleton<ILigaApi, LigaRest>();
 
 builder.Services.AddDbContext<Context>();
 builder.Services.AddDbContext<ContextMemory>(optional => optional.UseInMemoryDatabase("Database"));
