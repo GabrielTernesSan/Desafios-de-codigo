@@ -1,5 +1,4 @@
-﻿using Domain.Entities;
-using Domain.Repositories;
+﻿using Domain.Repositories;
 
 namespace Infra.Repositories
 {
@@ -12,11 +11,11 @@ namespace Infra.Repositories
             _contextMemory = contextMemory;
         }
 
-        public async Task SalvarAsync(Vingadores.Vingador vingador)
+        public async Task SalvarAsync(string vingador)
         {
             var cadastrarVingador = new Tables.Vingador
             {
-                codinome = vingador.ToString()
+                codinome = vingador
             };
 
             await _contextMemory.AddAsync(cadastrarVingador);

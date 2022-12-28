@@ -19,7 +19,7 @@ namespace Application.Handlers
         {
             var vingador = new Vingadores.Vingador(request.codinomeVingador);
 
-            await _repository.SalvarAsync(vingador);
+            await _repository.SalvarAsync(vingador.codinome);
 
             return new GenericRequestResult(true, "Vingador Cadastrado", vingador);
         }
