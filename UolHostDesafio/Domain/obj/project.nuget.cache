@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "lMwMlWzQYcii62HOO0WkRm/oMvjxOpQQ6lD9Lw+CpzNRUlgxiTp7O3Muv5Mu++RvwWeoCe+BBV+140cQgUnUZw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\gabriel.santos\\source\\repos\\UolHostDesafio\\Domain\\Domain.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\gabriel.santos\\.nuget\\packages\\mediatr\\11.1.0\\mediatr.11.1.0.nupkg.sha512",
+    "C:\\Users\\gabriel.santos\\.nuget\\packages\\mediatr.contracts\\1.0.1\\mediatr.contracts.1.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}
