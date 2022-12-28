@@ -1,4 +1,7 @@
 ﻿using Application.Requests;
+using Application.Requests.Jogador;
+using Application.Requests.LigaDaJustica;
+using Application.Requests.Vingadores;
 using Domain.Command;
 using Domain.Queries;
 using MediatR;
@@ -16,14 +19,16 @@ namespace Web.Controllers
         private readonly ILigaService _ligaService;
         private readonly IJogadorQuery _query;
         private readonly IVingadoresQuery _vingadoresQuery;
+        private readonly ILigaQuery _ligaQuery;
 
-        public HeroiController(IMediator mediator, IJogadorQuery query, IVingadorService vingadorService, IVingadoresQuery vingadoresQuery, ILigaService ligaService)
+        public HeroiController(IMediator mediator, IJogadorQuery query, IVingadorService vingadorService, IVingadoresQuery vingadoresQuery, ILigaService ligaService, ILigaQuery ligaQuery)
         {
             _mediator = mediator;
             _query = query;
             _vingadorService = vingadorService;
             _vingadoresQuery = vingadoresQuery;
             _ligaService = ligaService;
+            _ligaQuery = ligaQuery;
         }
 
         [HttpGet]
@@ -91,9 +96,27 @@ namespace Web.Controllers
         }
 
         [HttpGet("/liga/externo")]
-        public async Task<IActionResult> GetLiga()
+        public async Task<IActionResult> GetLigaEx()
         {
             var response = await _ligaService.BuscarLigaDaJustica();
+            return Ok(response);
+        }
+
+        [HttpPost("/liga/salvar")]
+        public async Task<IActionResult> PostLiga()
+        {
+            var response = await _ligaService.BuscarLigaDaJustica();
+            foreach (var liga in response.Codinomes.Codinome)
+            {
+                await _mediator.Send(new AddLigaRequest { codinomeLiga = liga });
+            }
+            return Ok();
+        }
+
+        [HttpGet("/liga")]
+        public async Task<IActionResult> GetLiga()
+        {
+            var response = await _ligaQuery.ObterLigaDaJustica();
             return Ok(response);
         }
     }

@@ -10,5 +10,6 @@ namespace Infra
         { }
 
         public DbSet<Vingador> Vingadores { get; set; }
+        public DbSet<LigaDaJustica> LigaDaJustica { get; set; }
     }
 }

@@ -4,17 +4,11 @@ namespace Domain.Entities
 {
     public class Liga
     {
-        public class Codinomes
+        public Liga(string codinome)
         {
-            [XmlElement(ElementName = "codinome")]
-            public List<string> Codinome { get; set; }
+            Codinome = codinome;
         }
 
-        [XmlRoot(ElementName = "liga_da_justica")]
-        public class LigaDaJustica
-        {
-            [XmlElement(ElementName = "codinomes")]
-            public Codinomes Codinomes { get; set; }
-        }
+        public string Codinome { get; set; }
     }
 }

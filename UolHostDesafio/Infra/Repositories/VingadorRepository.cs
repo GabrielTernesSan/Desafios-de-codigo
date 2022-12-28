@@ -18,7 +18,7 @@ namespace Infra.Repositories
                 codinome = vingador
             };
 
-            await _contextMemory.AddAsync(cadastrarVingador);
+            await _contextMemory.Vingadores.AddAsync(cadastrarVingador);
             await _contextMemory.SaveChangesAsync();
         }
     }

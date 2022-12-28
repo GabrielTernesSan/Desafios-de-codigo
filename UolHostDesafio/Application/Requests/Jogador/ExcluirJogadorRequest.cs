@@ -3,7 +3,7 @@ using FluentValidation;
 using MediatR;
 using System.Text.Json.Serialization;
 
-namespace Application.Requests
+namespace Application.Requests.Jogador
 {
     public class ExcluirJogadorRequest : IRequest<GenericRequestResult>
     {

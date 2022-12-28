@@ -1,9 +1,9 @@
-﻿using Application.Requests;
+﻿using Application.Requests.Jogador;
 using Domain.Command;
 using Domain.Repositories;
 using MediatR;
 
-namespace Application.Handlers
+namespace Application.Handlers.Jogadores
 {
     public class ExcluirJogadorHandler : IRequestHandler<ExcluirJogadorRequest, GenericRequestResult>
     {

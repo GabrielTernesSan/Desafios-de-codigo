@@ -1,11 +1,11 @@
-﻿using Application.Requests;
+﻿using Application.Requests.Jogador;
 using Domain.Command;
 using Domain.Entities;
 using Domain.Queries;
 using Domain.Repositories;
 using MediatR;
 
-namespace Application.Handlers
+namespace Application.Handlers.Jogadores
 {
     public class AddJogadorHandler : IRequestHandler<AddJogadorRequest, GenericRequestResult>
     {

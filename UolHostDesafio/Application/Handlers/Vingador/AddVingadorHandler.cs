@@ -1,10 +1,10 @@
-﻿using Application.Requests;
+﻿using Application.Requests.Vingadores;
 using Domain.Command;
 using Domain.Entities;
 using Domain.Repositories;
 using MediatR;
 
-namespace Application.Handlers
+namespace Application.Handlers.Vingador
 {
     public class AddVingadorHandler : IRequestHandler<AddVingadorRequest, GenericRequestResult>
     {

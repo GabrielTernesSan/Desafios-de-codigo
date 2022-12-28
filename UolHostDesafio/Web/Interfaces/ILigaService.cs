@@ -1,5 +1,4 @@
-﻿using Domain.Entities;
-using static Domain.Entities.Liga;
+﻿using static Domain.Entities.MembrosLiga;
 
 namespace Web.Interfaces
 {

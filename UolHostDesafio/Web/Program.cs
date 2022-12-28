@@ -1,4 +1,5 @@
-using Application.Handlers;
+using Application.Handlers.Jogadores;
+using Application.Handlers.Vingador;
 using Domain.Queries;
 using Domain.Repositories;
 using Infra;
@@ -31,8 +32,10 @@ builder.Services.AddDbContext<Context>();
 builder.Services.AddDbContext<ContextMemory>(optional => optional.UseInMemoryDatabase("Database"));
 builder.Services.AddTransient<IJogadorRepository, JogadorRepository>();
 builder.Services.AddTransient<IVingadorRepository, VingadorRepository>();
+builder.Services.AddTransient<ILigaRespository, LigaRepository>();
 builder.Services.AddTransient<IJogadorQuery, JogadorQuery>();
 builder.Services.AddTransient<IVingadoresQuery, VingadoresQuery>();
+builder.Services.AddTransient<ILigaQuery, LigaQuery>();
 
 var app = builder.Build();
 

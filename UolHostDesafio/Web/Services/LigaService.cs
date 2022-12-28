@@ -1,6 +1,5 @@
-﻿using Domain.Entities;
-using Web.Interfaces;
-using static Domain.Entities.Liga;
+﻿using Web.Interfaces;
+using static Domain.Entities.MembrosLiga;
 
 namespace Web.Services
 {

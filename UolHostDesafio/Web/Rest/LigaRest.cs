@@ -1,7 +1,7 @@
 ﻿using Domain.Entities;
 using System.Xml.Serialization;
 using Web.Interfaces;
-using static Domain.Entities.Liga;
+using static Domain.Entities.MembrosLiga;
 
 namespace Web.Rest
 {

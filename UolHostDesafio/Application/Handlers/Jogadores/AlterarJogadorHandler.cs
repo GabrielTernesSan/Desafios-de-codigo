@@ -1,11 +1,11 @@
-﻿using Application.Requests;
+﻿using Application.Requests.Jogador;
 using Domain.Command;
 using Domain.Entities;
 using Domain.Queries;
 using Domain.Repositories;
 using MediatR;
 
-namespace Application.Handlers
+namespace Application.Handlers.Jogadores
 {
     public class AlterarJogadorHandler : IRequestHandler<AlterarJogadorRequest, GenericRequestResult>
     {
@@ -23,7 +23,7 @@ namespace Application.Handlers
         {
             var jogador = await _jogadorQuery.ObterJogadorIdAsync(request.jogadorId);
 
-            if(jogador != null)
+            if (jogador != null)
             {
                 jogador.Nome = request.Nome;
                 jogador.Email = request.Email;

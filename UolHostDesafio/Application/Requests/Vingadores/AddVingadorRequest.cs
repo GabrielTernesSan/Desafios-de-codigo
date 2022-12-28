@@ -2,7 +2,7 @@
 using FluentValidation;
 using MediatR;
 
-namespace Application.Requests
+namespace Application.Requests.Vingadores
 {
     public class AddVingadorRequest : IRequest<GenericRequestResult>
     {
