@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "qKvGfeLNnLQTK8q80v4f3D7/LRRj7HxQCnCWoVX4PjzxMjFXlBKGI/db/GE5ysQIvynB21L/n3G/+7U0a1qV0w==",
+  "dgSpecHash": "mS9D7tf0sbQflsUYBXujBYzDSdWv/RgyXfk0xSKtphQYZhItdLjq1ebSL3WsQ/dyoPT+J9YWdXgPpeUzO3jE+g==",
   "success": true,
-  "projectFilePath": "C:\\Users\\gabriel.santos\\source\\repos\\UolHostDesafio\\Application\\Application.csproj",
+  "projectFilePath": "C:\\Users\\gabriel.santos\\Documents\\DesafiosDeCodigo\\UolHostDesafio\\Application\\Application.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\gabriel.santos\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\gabriel.santos\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",

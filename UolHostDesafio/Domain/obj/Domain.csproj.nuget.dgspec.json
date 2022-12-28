@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\gabriel.santos\\source\\repos\\UolHostDesafio\\Domain\\Domain.csproj": {}
+    "C:\\Users\\gabriel.santos\\Documents\\DesafiosDeCodigo\\UolHostDesafio\\Domain\\Domain.csproj": {}
   },
   "projects": {
-    "C:\\Users\\gabriel.santos\\source\\repos\\UolHostDesafio\\Domain\\Domain.csproj": {
+    "C:\\Users\\gabriel.santos\\Documents\\DesafiosDeCodigo\\UolHostDesafio\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\gabriel.santos\\source\\repos\\UolHostDesafio\\Domain\\Domain.csproj",
+        "projectUniqueName": "C:\\Users\\gabriel.santos\\Documents\\DesafiosDeCodigo\\UolHostDesafio\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "C:\\Users\\gabriel.santos\\source\\repos\\UolHostDesafio\\Domain\\Domain.csproj",
+        "projectPath": "C:\\Users\\gabriel.santos\\Documents\\DesafiosDeCodigo\\UolHostDesafio\\Domain\\Domain.csproj",
         "packagesPath": "C:\\Users\\gabriel.santos\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\gabriel.santos\\source\\repos\\UolHostDesafio\\Domain\\obj\\",
+        "outputPath": "C:\\Users\\gabriel.santos\\Documents\\DesafiosDeCodigo\\UolHostDesafio\\Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\gabriel.santos\\AppData\\Roaming\\NuGet\\NuGet.Config",
