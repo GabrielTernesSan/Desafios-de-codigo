@@ -5,6 +5,7 @@ using Domain.Enums;
 using Domain.Queries;
 using Domain.Repositories;
 using MediatR;
+using Microsoft.IdentityModel.Tokens;
 
 namespace Application.Handlers.Jogadores
 {
@@ -35,7 +36,7 @@ namespace Application.Handlers.Jogadores
                 }
             }
 
-            if (request.Grupo.Equals(EGrupo.VINGADORES) && vingadoresDisponiveis != null)
+            if (request.Grupo.Equals(EGrupo.VINGADORES) && !vingadoresDisponiveis.IsNullOrEmpty())
             {
                 var index = random.Next(vingadoresDisponiveis.Count());
 
@@ -47,7 +48,7 @@ namespace Application.Handlers.Jogadores
 
                 return new GenericRequestResult(true, "Jogador Cadastrado", jogadorCadastrado);
             }
-            else if (request.Grupo.Equals(EGrupo.LIGA) && LigaDisponiveis != null)
+            else if (request.Grupo.Equals(EGrupo.LIGA) && !LigaDisponiveis.IsNullOrEmpty())
             {
                 var index = random.Next(LigaDisponiveis.Count());
 
