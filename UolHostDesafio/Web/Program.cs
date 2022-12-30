@@ -8,6 +8,7 @@ using Infra.Repositories;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 using System.Reflection;
+using Web.HostedService;
 using Web.Interfaces;
 using Web.Rest;
 using Web.Services;
@@ -30,6 +31,8 @@ builder.Services.AddSingleton<ILigaApi, LigaRest>();
 
 builder.Services.AddDbContext<Context>();
 builder.Services.AddDbContext<ContextMemory>(optional => optional.UseInMemoryDatabase("Database"));
+
+builder.Services.AddHostedService<HeroisHostedService>();
 
 builder.Services.AddTransient<IJogadorRepository, JogadorRepository>();
 builder.Services.AddTransient<IVingadorRepository, VingadorRepository>();
