@@ -30,6 +30,7 @@ builder.Services.AddSingleton<ILigaApi, LigaRest>();
 
 builder.Services.AddDbContext<Context>();
 builder.Services.AddDbContext<ContextMemory>(optional => optional.UseInMemoryDatabase("Database"));
+
 builder.Services.AddTransient<IJogadorRepository, JogadorRepository>();
 builder.Services.AddTransient<IVingadorRepository, VingadorRepository>();
 builder.Services.AddTransient<ILigaRespository, LigaRepository>();

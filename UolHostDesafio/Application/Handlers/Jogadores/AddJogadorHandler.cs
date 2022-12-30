@@ -1,6 +1,7 @@
 ﻿using Application.Requests.Jogador;
 using Domain.Command;
 using Domain.Entities;
+using Domain.Enums;
 using Domain.Queries;
 using Domain.Repositories;
 using MediatR;
@@ -22,6 +23,9 @@ namespace Application.Handlers.Jogadores
         public async Task<GenericRequestResult> Handle(AddJogadorRequest request, CancellationToken cancellationToken)
         {
             var jogadoresExistentes = await _query.ObterJogadoresAsync();
+            var vingadoresDisponiveis = await _query.VerificarVingadores();
+            var LigaDisponiveis = await _query.VerificarLiga();
+            var random = new Random();
 
             foreach (var jogador in jogadoresExistentes)
             {
@@ -31,11 +35,34 @@ namespace Application.Handlers.Jogadores
                 }
             }
 
-            var jogadorCadastrado = new Jogador(request.Nome, request.Email, request.Telefone, request.Codinome, request.Grupo);
+            if (request.Grupo.Equals(EGrupo.VINGADORES) && vingadoresDisponiveis != null)
+            {
+                var index = random.Next(vingadoresDisponiveis.Count());
 
-            await _repository.SalvarAsync(jogadorCadastrado);
+                var jogadorCadastrado = new Jogador(request.Nome, request.Email, request.Telefone, request.Grupo);
 
-            return new GenericRequestResult(true, "Jogador Cadastrado", jogadorCadastrado);
+                jogadorCadastrado.Codinome = vingadoresDisponiveis.ElementAt(index);
+
+                await _repository.SalvarAsync(jogadorCadastrado);
+
+                return new GenericRequestResult(true, "Jogador Cadastrado", jogadorCadastrado);
+            }
+            else if (request.Grupo.Equals(EGrupo.LIGA) && LigaDisponiveis != null)
+            {
+                var index = random.Next(LigaDisponiveis.Count());
+
+                var jogadorCadastrado = new Jogador(request.Nome, request.Email, request.Telefone, request.Grupo);
+
+                jogadorCadastrado.Codinome = LigaDisponiveis.ElementAt(index);
+
+                await _repository.SalvarAsync(jogadorCadastrado);
+
+                return new GenericRequestResult(true, "Jogador Cadastrado", jogadorCadastrado);
+            }
+            else
+            {
+                return new GenericRequestResult(false, "Codinomes indiponíveis", null);
+            }
         }
     }
 }

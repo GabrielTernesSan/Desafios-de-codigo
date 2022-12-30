@@ -6,5 +6,7 @@ namespace Domain.Queries
     {
         Task<IEnumerable<ObterJogadorResponse>> ObterJogadoresAsync();
         Task<ObterJogadorResponse> ObterJogadorIdAsync(int jogadorId);
+        Task<IEnumerable<string>> VerificarVingadores();
+        Task<IEnumerable<string>> VerificarLiga();
     }
 }

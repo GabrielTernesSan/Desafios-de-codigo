@@ -8,14 +8,23 @@ namespace Domain.Entities
         public string Nome { get; private set; }
         public string Email { get; private set; }
         public string Telefone { get; private set; }
-        public string Codinome { get; private set; }
+        public string Codinome { get; set; }
         public EGrupo Grupo { get; private set; }
+
         public Jogador(string nome, string email, string telefone, string codinome, EGrupo grupo)
         {
             Nome = nome;
             Email = email;
             Telefone = telefone;
             Codinome = codinome;
+            Grupo = grupo;
+        }
+
+        public Jogador(string nome, string email, string telefone, EGrupo grupo)
+        {
+            Nome = nome;
+            Email = email;
+            Telefone = telefone;
             Grupo = grupo;
         }
 
