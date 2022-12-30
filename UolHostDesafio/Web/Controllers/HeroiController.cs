@@ -1,7 +1,4 @@
-﻿using Application.Requests;
-using Application.Requests.Jogador;
-using Application.Requests.LigaDaJustica;
-using Application.Requests.Vingadores;
+﻿using Application.Requests.Jogador;
 using Domain.Command;
 using Domain.Queries;
 using MediatR;
@@ -77,17 +74,6 @@ namespace Web.Controllers
             return Ok(response);
         }
 
-        [HttpPost("/vingadores/salvar")]
-        public async Task<IActionResult> PostVingadores()
-        {
-            var response = await _vingadorService.BuscarVingadores();
-            foreach (var vingador in response.vingadores)
-            {
-                await _mediator.Send(new AddVingadorRequest { codinomeVingador = vingador.codinome });
-            }
-            return Ok();
-        }
-
         [HttpGet("/vingadores")]
         public async Task<IActionResult> GetVingador()
         {
@@ -100,17 +86,6 @@ namespace Web.Controllers
         {
             var response = await _ligaService.BuscarLigaDaJustica();
             return Ok(response);
-        }
-
-        [HttpPost("/liga/salvar")]
-        public async Task<IActionResult> PostLiga()
-        {
-            var response = await _ligaService.BuscarLigaDaJustica();
-            foreach (var liga in response.Codinomes.Codinome)
-            {
-                await _mediator.Send(new AddLigaRequest { codinomeLiga = liga });
-            }
-            return Ok();
         }
 
         [HttpGet("/liga")]

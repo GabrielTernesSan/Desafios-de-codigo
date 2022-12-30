@@ -1,6 +1,21 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <ItemGroup>
+    <Compile Remove="Handlers\LigaDaJustica\**" />
+    <Compile Remove="Handlers\Vingador\**" />
+    <Compile Remove="Requests\LigaDaJustica\**" />
+    <Compile Remove="Requests\Vingadores\**" />
+    <EmbeddedResource Remove="Handlers\LigaDaJustica\**" />
+    <EmbeddedResource Remove="Handlers\Vingador\**" />
+    <EmbeddedResource Remove="Requests\LigaDaJustica\**" />
+    <EmbeddedResource Remove="Requests\Vingadores\**" />
+    <None Remove="Handlers\LigaDaJustica\**" />
+    <None Remove="Handlers\Vingador\**" />
+    <None Remove="Requests\LigaDaJustica\**" />
+    <None Remove="Requests\Vingadores\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\Domain\Domain.csproj" />
     <ProjectReference Include="..\Infra\Infra.csproj" />
   </ItemGroup>

@@ -1,5 +1,4 @@
 using Application.Handlers.Jogadores;
-using Application.Handlers.Vingador;
 using Domain.Queries;
 using Domain.Repositories;
 using Infra;
@@ -22,7 +21,6 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddMediatR(typeof(AddJogadorHandler).GetTypeInfo().Assembly);
 builder.Services.AddMediatR(typeof(AlterarJogadorHandler).GetTypeInfo().Assembly);
 builder.Services.AddMediatR(typeof(ExcluirJogadorHandler).GetTypeInfo().Assembly);
-builder.Services.AddMediatR(typeof(AddVingadorHandler).GetTypeInfo().Assembly);
 
 builder.Services.AddSingleton<IVingadorService, VingadorService>();
 builder.Services.AddSingleton<IVingadorApi, VingadoresRest>();
@@ -35,8 +33,6 @@ builder.Services.AddDbContext<ContextMemory>(optional => optional.UseInMemoryDat
 builder.Services.AddHostedService<HeroisHostedService>();
 
 builder.Services.AddTransient<IJogadorRepository, JogadorRepository>();
-builder.Services.AddTransient<IVingadorRepository, VingadorRepository>();
-builder.Services.AddTransient<ILigaRespository, LigaRepository>();
 builder.Services.AddTransient<IJogadorQuery, JogadorQuery>();
 builder.Services.AddTransient<IVingadoresQuery, VingadoresQuery>();
 builder.Services.AddTransient<ILigaQuery, LigaQuery>();
