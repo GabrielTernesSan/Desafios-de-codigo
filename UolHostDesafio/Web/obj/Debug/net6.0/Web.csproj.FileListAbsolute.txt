@@ -206,3 +206,5 @@ C:\Users\gabriel.santos\Documents\DesafiosDeCodigo\UolHostDesafio\Web\obj\Debug\
 C:\Users\gabriel.santos\Documents\DesafiosDeCodigo\UolHostDesafio\Web\obj\Debug\net6.0\Web.pdb
 C:\Users\gabriel.santos\Documents\DesafiosDeCodigo\UolHostDesafio\Web\obj\Debug\net6.0\Web.genruntimeconfig.cache
 C:\Users\gabriel.santos\Documents\DesafiosDeCodigo\UolHostDesafio\Web\obj\Debug\net6.0\ref\Web.dll
+C:\Users\gabriel.santos\Documents\DesafiosDeCodigo\UolHostDesafio\Web\bin\Debug\net6.0\FluentValidation.AspNetCore.dll
+C:\Users\gabriel.santos\Documents\DesafiosDeCodigo\UolHostDesafio\Web\bin\Debug\net6.0\FluentValidation.DependencyInjectionExtensions.dll

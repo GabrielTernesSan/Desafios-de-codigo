@@ -1,11 +1,16 @@
 using Application.Handlers.Jogadores;
+using Application.Requests.Jogador;
 using Domain.Queries;
 using Domain.Repositories;
+using FluentValidation;
+using FluentValidation.AspNetCore;
 using Infra;
 using Infra.Queries;
 using Infra.Repositories;
 using MediatR;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using System;
 using System.Reflection;
 using Web.HostedService;
 using Web.Interfaces;
@@ -15,7 +20,7 @@ using Web.Services;
 var builder = WebApplication.CreateBuilder(args);
 
 
-builder.Services.AddControllers();
+builder.Services.AddControllers().AddFluentValidation();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddMediatR(typeof(AddJogadorHandler).GetTypeInfo().Assembly);
@@ -36,6 +41,9 @@ builder.Services.AddTransient<IJogadorRepository, JogadorRepository>();
 builder.Services.AddTransient<IJogadorQuery, JogadorQuery>();
 builder.Services.AddTransient<IVingadoresQuery, VingadoresQuery>();
 builder.Services.AddTransient<ILigaQuery, LigaQuery>();
+
+builder.Services.AddTransient<IValidator<AddJogadorRequest>, AddJogadorRequestValidator>();
+builder.Services.AddTransient<IValidator<AlterarJogadorRequest>, AlterarJogadorRequestValidator>();
 
 var app = builder.Build();
 

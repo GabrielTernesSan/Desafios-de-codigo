@@ -18,7 +18,9 @@ namespace Application.Requests.Jogador
         public AddJogadorRequestValidator()
         {
             RuleFor(r => r.Nome).NotEmpty();
-            RuleFor(r => r.Email).NotEmpty();
+            RuleFor(r => r.Email).NotEmpty().EmailAddress();
+            RuleFor(r => r.Telefone)
+                .Matches("^\\(?[1-9]{2}\\)? ?(?:[2-8]|9[1-9])[0-9]{3}\\-?[0-9]{4}$");
         }
     }
 }

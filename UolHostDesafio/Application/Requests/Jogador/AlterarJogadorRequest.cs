@@ -22,7 +22,7 @@ namespace Application.Requests.Jogador
         public AlterarJogadorRequestValidator()
         {
             RuleFor(r => r.Nome).NotEmpty();
-            RuleFor(r => r.Email).NotEmpty();
+            RuleFor(r => r.Email).NotEmpty().EmailAddress();
         }
     }
 }
