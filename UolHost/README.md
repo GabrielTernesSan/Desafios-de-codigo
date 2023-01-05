@@ -93,6 +93,15 @@ Método GET
 
 ![Consumo Api](https://github.com/GabrielTernesSan/Desafios-de-codigo/blob/master/Imagens/ConsumoVingadores.gif)
 
+Vingadores em memória:
+
+````
+Método GET
+/vingadores
+````
+
+![vingadores](https://github.com/GabrielTernesSan/Desafios-de-codigo/blob/master/Imagens/vingadores.gif)
+
 Consome a lista da Liga da Justiça disponibilizada:
 
 ```` 
@@ -101,6 +110,15 @@ Método GET
 ````
 
 ![Consome liga](https://github.com/GabrielTernesSan/Desafios-de-codigo/blob/master/Imagens/ConsumoLiga.gif)
+
+Liga da Justiça em memória:
+
+````
+Método GET
+/liga
+````
+
+![liga](https://github.com/GabrielTernesSan/Desafios-de-codigo/blob/master/Imagens/liga.gif)
 
 Cadastra um novo jogador:
 
@@ -158,4 +176,4 @@ Método DELETE(int id)
 v1/jogador/{id}
 ````
 
-![Jogador Id](https://github.com/GabrielTernesSan/Desafios-de-codigo/blob/master/Imagens/DeleteJogador.gif)
+![Deletar jogador](https://github.com/GabrielTernesSan/Desafios-de-codigo/blob/master/Imagens/DeleteJogador.gif)
