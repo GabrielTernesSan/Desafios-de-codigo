@@ -28,8 +28,8 @@ namespace Application.Handlers.Jogadores
                 jogador.Nome = request.Nome;
                 jogador.Email = request.Email;
                 jogador.telefone = request.Telefone;
-                jogador.Codinome = request.Codinome;
-                jogador.Grupo = request.Grupo;
+                jogador.Codinome = jogador.Codinome;
+                jogador.Grupo = jogador.Grupo;
 
                 await _jogadorRepository.AtualizarJogadorAsync(new Jogador(jogador.Id, jogador.Nome, jogador.Email, jogador.telefone, jogador.Codinome, jogador.Grupo));
                 return new GenericRequestResult(true, "Jogador atualizado", jogador);

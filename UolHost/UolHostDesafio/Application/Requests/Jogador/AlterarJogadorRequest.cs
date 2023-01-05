@@ -13,8 +13,6 @@ namespace Application.Requests.Jogador
         public string Nome { get; set; }
         public string Email { get; set; }
         public string Telefone { get; set; }
-        public string Codinome { get; set; }
-        public EGrupo Grupo { get; set; }
     }
 
     public class AlterarJogadorRequestValidator : AbstractValidator<AlterarJogadorRequest>

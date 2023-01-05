@@ -87,6 +87,7 @@ Assim como o aprendizado de novos conceitos, como:
 Consome a lista de Vingadores disponibilizada:
 
 ```` 
+Método GET
 /vingadores/externo
 ````
 
@@ -95,7 +96,66 @@ Consome a lista de Vingadores disponibilizada:
 Consome a lista da Liga da Justiça disponibilizada:
 
 ```` 
+Método GET
 /liga/externo
 ````
 
 ![Consome liga](https://github.com/GabrielTernesSan/Desafios-de-codigo/blob/master/Imagens/ConsumoLiga.gif)
+
+Cadastra um novo jogador:
+
+`````
+Método POST
+v1/jogador +
+Json
+{
+  "nome": "string",
+  "email": "string",
+  "telefone": "string",
+  "grupo": 1
+}
+`````
+
+![Novo Jogador](https://github.com/GabrielTernesSan/Desafios-de-codigo/blob/master/Imagens/Cadastro.gif)
+
+Jogadores cadastrados:
+
+````
+Método GET
+v1/jogador
+````
+
+![Novo Jogador](https://github.com/GabrielTernesSan/Desafios-de-codigo/blob/master/Imagens/jogadoresCadastrados.gif)
+
+Jogador por Id:
+
+````
+Método GET(int id)
+v1/jogador/{id}
+````
+
+![Jogador Id](https://github.com/GabrielTernesSan/Desafios-de-codigo/blob/master/Imagens/JogadorId.gif)
+
+Editar Jogador:
+
+````
+Método PUT(int, AlteraJogadorRequest)
+v1/jogador/{id} +
+Json 
+{
+  "nome": "string",
+  "email": "string",
+  "telefone": "string"
+}
+````
+
+![Jogador Id](https://github.com/GabrielTernesSan/Desafios-de-codigo/blob/master/Imagens/EditarJogador.gif)
+
+Deletar Jogador:
+
+````
+Método DELETE(int id)
+v1/jogador/{id}
+````
+
+![Jogador Id](https://github.com/GabrielTernesSan/Desafios-de-codigo/blob/master/Imagens/DeleteJogador.gif)
