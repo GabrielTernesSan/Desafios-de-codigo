@@ -1,0 +1,35 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    background-color: #fafafa;
+    font-family: "Poppins", sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+a {
+    color: #fafafa;
+    text-decoration: none;
+    cursor: pointer;
+    transition: color 1s;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.container {
+    width: 980px;
+    background-color: #fff;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+}
+
+.inner-container {
+    margin: 25px;
+}
