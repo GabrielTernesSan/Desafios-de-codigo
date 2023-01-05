@@ -90,7 +90,7 @@ Consome a lista de Vingadores disponibilizada:
 /vingadores/externo
 ````
 
-![Consumo Api](C:\Users\gabriel.santos\Downloads\ezgif.com-gif-maker.gif)
+![Consumo Api](https://github.com/GabrielTernesSan/Desafios-de-codigo/blob/master/Imagens/ConsumoVingadores.gif)
 
 Consome a lista da Liga da Justiça disponibilizada:
 
@@ -98,4 +98,4 @@ Consome a lista da Liga da Justiça disponibilizada:
 /liga/externo
 ````
 
-![Consome liga](C:\Users\gabriel.santos\Downloads\ezgif.com-gif-maker (1).gif)
+![Consome liga](https://github.com/GabrielTernesSan/Desafios-de-codigo/blob/master/Imagens/ConsumoLiga.gif)
