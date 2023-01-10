@@ -16,7 +16,7 @@ Esse repositório tem como objetivo compilar desafios de código retirados do re
 
 > Back-end: completo 🆗
 
-> Front-end: Em desenvolvimento 👷
+> Front-end: completo 🆗
 
  > Resumo: O desafio consiste em desenvolver uma tela de cadastro de jogadores, nesta tela o jogador deve poder cadastrar **Nome**, **Email**, **Telefone**, e **Codinome** onde as propriedade **Nome** e **Email** devem ser obrigatórias. Obrigatoriamente, ler a informação do codinome em arquivos na internet. Ou seja, ao se cadastrar o usuário irá escolher de que equipe virá seu codinome, Liga da Justiça ou Vingadores que deverão ser consumidas de arquivos disponibilizados para 'consumo' de APIs.
 
