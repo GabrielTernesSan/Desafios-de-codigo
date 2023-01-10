@@ -24,7 +24,14 @@ a {
 }
 
 .container {
-    width: 980px;
+    width: 1024px;
+    background-color: #fff;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+}
+
+.container-cadastro {
+    width: 450px;
     background-color: #fff;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
     border-radius: 5px;
@@ -33,3 +40,5 @@ a {
 .inner-container {
     margin: 25px;
 }
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

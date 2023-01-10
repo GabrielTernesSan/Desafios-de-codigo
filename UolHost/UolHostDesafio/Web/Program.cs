@@ -27,6 +27,8 @@ builder.Services.AddMediatR(typeof(AddJogadorHandler).GetTypeInfo().Assembly);
 builder.Services.AddMediatR(typeof(AlterarJogadorHandler).GetTypeInfo().Assembly);
 builder.Services.AddMediatR(typeof(ExcluirJogadorHandler).GetTypeInfo().Assembly);
 
+builder.Services.AddCors();
+
 builder.Services.AddSingleton<IVingadorService, VingadorService>();
 builder.Services.AddSingleton<IVingadorApi, VingadoresRest>();
 builder.Services.AddSingleton<ILigaService, LigaService>();
@@ -52,6 +54,14 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+app.UseCors(c =>
+{
+    c.AllowAnyHeader();
+    c.AllowAnyMethod();
+    c.AllowAnyOrigin();
+}
+);
 
 app.UseHttpsRedirection();
 

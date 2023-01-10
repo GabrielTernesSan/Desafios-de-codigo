@@ -1,12 +1,29 @@
-<div class="container">
+<div class="container-cadastro">
     <div class="inner-container">
-        <h2>Cadastro do jogador UOL</h2>
-        <h4>Nome:</h4>
-        <h4>E-mail:</h4>
-        <h4>Telefone:</h4>
-        <h4>Quero ser do grupo:</h4>
-        <app-button><a [routerLink]="['/cadastro']">Cadastrar</a></app-button><app-button><a [routerLink]="['/']">Listar
-                jogadores</a></app-button>
-        <router-outlet></router-outlet>
+        <div class="text-center">
+            <h2>Cadastro do jogador UOL</h2>
+            <form [formGroup]="form">
+                <mat-form-field>
+                    <input matInput placeholder="Nome do jogador" formControlName="nome">
+                </mat-form-field>
+                <br>
+                <mat-form-field>
+                    <input matInput placeholder="Email" formControlName="email">
+                </mat-form-field>
+                <br>
+                <mat-form-field>
+                    <input matInput placeholder="Telefone" formControlName="telefone">
+                </mat-form-field>
+                <br>
+                <mat-radio-group aria-label="Equipe" formControlName="grupo">
+                    <mat-radio-button value="1">Vingadores</mat-radio-button><br>
+                    <mat-radio-button value="2">Liga da Justiça</mat-radio-button>
+                </mat-radio-group>
+            </form>
+
+            <app-button><a (click)="onSubmit()">Cadastrar</a></app-button><app-button><a [routerLink]=" ['/']">Listar
+                    jogadores</a></app-button>
+            <router-outlet></router-outlet>
+        </div>
     </div>
 </div>

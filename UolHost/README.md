@@ -82,7 +82,9 @@ Assim como o aprendizado de novos conceitos, como:
 
 # Funcionamento
 
-## Endpoints
+## Backend
+
+### Endpoints
 
 Consome a lista de Vingadores disponibilizada:
 
@@ -177,3 +179,7 @@ v1/jogador/{id}
 ````
 
 ![Deletar jogador](https://github.com/GabrielTernesSan/Desafios-de-codigo/blob/master/Imagens/DeleteJogador.gif)
+
+## Frontend
+
+![front](https://github.com/GabrielTernesSan/Desafios-de-codigo/blob/master/Imagens/front.mp4)
