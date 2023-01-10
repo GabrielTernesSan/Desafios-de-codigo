@@ -12,7 +12,7 @@ Esse repositório tem como objetivo compilar desafios de código retirados do re
 - Documentar minha evolução na programação;
 
 ## Desafio em desenvolvimento
-[Desafio UolHost](https://github.com/GabrielTernesSan/Desafios-de-codigo/tree/master/UolHostDesafio)
+[Desafio UolHost](https://github.com/GabrielTernesSan/Desafios-de-codigo/tree/master/UolHost)
 
 > Back-end: completo 🆗
 
