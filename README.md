@@ -13,6 +13,8 @@ Esse repositório tem como objetivo compilar desafios de código retirados do re
 
 ## Desafio em desenvolvimento
 
+[Zé Delivery](https://github.com/GabrielTernesSan/Desafios-de-codigo/tree/master/ZeDelivery)
+
 > Back-end: Em desenvolvimento 👷
 
 > Resumo: Nós esperamos que você desenvolva um serviço que disponibilize uma API REST ou GraphQL que implemente essas funcionalidades e requisitos técnicos:
