@@ -182,4 +182,6 @@ v1/jogador/{id}
 
 ## Frontend
 
-![front](https://github.com/GabrielTernesSan/Desafios-de-codigo/blob/master/Imagens/front.mp4)
+https://user-images.githubusercontent.com/73451261/211619200-17937214-f387-41e5-84a4-ca61524d20fe.mp4
+
+
