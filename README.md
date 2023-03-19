@@ -13,22 +13,24 @@ Esse repositório tem como objetivo compilar desafios de código retirados do re
 
 ## Desafio em desenvolvimento
 
-[Zé Delivery](https://github.com/GabrielTernesSan/Desafios-de-codigo/tree/master/ZeDelivery)
+Sua tarefa é construir uma API e banco de dados para a aplicação VUTTR (Very Useful Tools to Remember). A aplicação é um simples repositório para gerenciar ferramentas com seus respectivos nomes, links, descrições e tags.
+### O mínimo necessário
 
-> Back-end: Em desenvolvimento 👷
+- Uma aplicação contendo uma API real simples, sem autenticação, que atenda os requisitos descritos abaixo, fazendo requisições à um banco de dados para persistência;
+- README.md contendo informações básicas do projeto e como executá-lo;
+- [API Blueprint](https://apiblueprint.org/) ou [Swagger](https://swagger.io/docs/specification/basic-structure/) da aplicação.
 
-> Resumo: Nós esperamos que você desenvolva um serviço que disponibilize uma API REST ou GraphQL que implemente essas funcionalidades e requisitos técnicos:
->
-> Salvar no banco de dados **todas** as seguintes informações representadas por este JSON junto com as regras subsequentes:
->
-> 1. O campo `address` (endereço em inglês) segue o formato `GeoJSON Point` 
-> 2. o campo `coverageArea` (área de cobertura em inglês) segue o formato `GeoJSON MultiPolygon`
-> 3. O campo `document` deve ser único entre os parceiros;
-> 4. O campo `id` deve ser único entre os parceiros, mas não necessariamente um número inteiro;
->
-> Retornar um parceiro específico baseado no seu campo `id` com todos os campos apresentados acima.
->
-> Dada uma localização pelo usuário da API (coordenadas `long` e `lat`), procure o parceiro que esteja **mais próximo** e **que cuja área de cobertura inclua** a localização.
+### Bônus
+
+Os seguintes itens não são obrigatórios, mas darão mais valor ao seu trabalho (os em negrito são mais significativos para nós)
+
+- Uso de ferramentas externas que facilitem o seu trabalho;
+- Cuidados especiais com otimização, padrões, entre outros;
+- Migrations ou script para configuração do banco de dados utilizado;
+- **Testes**;
+- **Conteinerização da aplicação**;
+- **Autenticação e autorização** (**OAuth, JWT**);
+- Sugestões sobre o challenge embasadas em alguma argumentação.
 
 ## Desafios completos
 
